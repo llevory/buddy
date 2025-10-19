@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buddy Hunt — 新生线索小测验</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap" id="app">
+    <header class="header">
+      <h1>Buddy Hunt • 线索测验</h1>
+      <p class="subtitle">依次回答三道题，答对才能进入下一题。答错可以重试。完成后会显示领取线索的位置。</p>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <div class="progress">
+        <div id="progressBar" class="progress__fill" style="width:0%"></div>
+      </div>
+
+      <div id="questionArea" class="question-area">
+        <!-- Question injected by JavaScript -->
+      </div>
+
+      <div class="controls">
+        <button id="submitBtn" class="btn primary" disabled>提交答案</button>
+        <button id="nextBtn" class="btn" hidden>下一题</button>
+      </div>
+
+      <div id="feedback" class="feedback" aria-atomic="true"></div>
+    </section>
+
+    <footer class="footer">
+      <small>设计：Buddy Hunt • 给新生的趣味 hint</small>
+    </footer>
+  </main>
+
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
